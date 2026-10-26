@@ -23,6 +23,8 @@ JOIN city c ON a.city_id = c.city_id
 JOIN customer cust ON st.store_id = cust.store_id
 GROUP BY st.store_id, s.last_name, s.first_name, c.city
 HAVING COUNT(cust.customer_id) > 300;
+![скриншот](https://github.com/isokolov2101-afk/sql/blob/main/screenshots/total%20customers.jpg)
+
 
 ### Задание 2
 
@@ -33,6 +35,7 @@ HAVING COUNT(cust.customer_id) > 300;
 SELECT COUNT(*) AS films_longer_than_average
 FROM film
 WHERE length > (SELECT AVG(length) FROM film);
+![скриншот](https://github.com/isokolov2101-afk/sql/blob/main/screenshots/films_longer_than_average.jpg)
 
 ### Задание 3
 
@@ -48,3 +51,4 @@ FROM payment
 GROUP BY DATE_FORMAT(payment_date, '%Y-%m')
 ORDER BY total_sales DESC
 LIMIT 1;
+![скриншот](https://github.com/isokolov2101-afk/sql/blob/main/screenshots/top_payment_month.jpg)
